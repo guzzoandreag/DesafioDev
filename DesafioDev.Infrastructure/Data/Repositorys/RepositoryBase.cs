@@ -38,13 +38,11 @@ namespace DesafioDev.Infrastructure.Data.Repositorys
             return dataContext.Set<TEntity>().Find(id);
         }
 
-        public void Delete(TEntity entity)
+        public virtual void Delete(TEntity entity)
         {
             try
-            {
-                
-                dataContext.Entry(entity).State = EntityState.Modified;
-                //dataContext.Set<TEntity>().Remove(entity);
+            {               
+                dataContext.Set<TEntity>().Remove(entity);
                 dataContext.SaveChanges();
             }
             catch (Exception ex)
