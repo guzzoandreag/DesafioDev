@@ -18,9 +18,9 @@ namespace DesafioDev.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get([FromQuery] int skip = 0, int take = 2)
+        public ActionResult<IEnumerable<string>> Get([FromQuery] int skip = 0, int take = 2, string pro_nome = null)
         {
-            return Ok(this.applicationServiceProduto.GetAll(skip, take));
+            return Ok(this.applicationServiceProduto.GetAll(skip, take, pro_nome));
         }
 
         [HttpGet("{id}")]

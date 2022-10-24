@@ -11,7 +11,7 @@ namespace DesafioDev.Application.Interfaces
 
         void Delete(ProdutoDto produtoDto);
 
-        IEnumerable<ProdutoDto> GetAll(int skip, int take);
+        IEnumerable<ProdutoDto> GetAll(int skip, int take, string pro_nome);
 
         ProdutoDto GetById(int id);
     }

@@ -27,9 +27,9 @@ namespace DesafioDev.Application
             serviceProduto.Add(produto);
         }
 
-        public IEnumerable<ProdutoDto> GetAll(int skip, int take)
+        public IEnumerable<ProdutoDto> GetAll(int skip, int take, string pro_nome)
         {
-            var produtos = serviceProduto.GetAll(skip, take);
+            var produtos = serviceProduto.GetAll(skip, take, pro_nome);
             return mapperProduto.MapperListProdutoDto(produtos);
         }
 
