@@ -41,7 +41,6 @@ namespace DesafioDev.Application
 
         public void Delete(ProdutoDto produtoDto)
         {
-            produtoDto.pro_situacao = false;
             var produto = mapperProduto.MapperDtoToEntity(produtoDto);
             serviceProduto.Delete(produto);
         }

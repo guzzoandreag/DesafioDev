@@ -32,6 +32,7 @@ namespace DesafioDev.Infrastructure.Data.Repositorys
         {
             try
             {
+                entity.pro_situacao = false;
                 dataContext.Entry(entity).State = EntityState.Modified;
                 //dataContext.Set<TEntity>().Remove(entity);
                 dataContext.SaveChanges();

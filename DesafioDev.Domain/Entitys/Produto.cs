@@ -14,7 +14,7 @@ namespace DesafioDev.Domain.Entitys
         public string pro_nome { get; private set; }
         [Required]
         [DefaultValue(true)]
-        public bool pro_situacao { get; private set; }
+        public bool pro_situacao { get; set; }
         public DateTime pro_datafabricacao { get; private set; }
         public DateTime pro_datavalidade { get; private set; }
         [ForeignKey("Fornecedor")]
