@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Http.OData;
 
 namespace DesafioDev.API.Controllers
 {
@@ -20,7 +19,6 @@ namespace DesafioDev.API.Controllers
         }
         
         [HttpGet]
-        [EnableQuery]
         public ActionResult<IEnumerable<string>> Get([FromQuery] int skip = 0, int take = 2)
         {
             return Ok(this.applicationServiceFornecedor.GetAll(skip, take));
